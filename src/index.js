@@ -8,4 +8,6 @@ async function handler(request) {
   });
 }
 
-addEventListener("fetch", handler);
+addEventListener("fetch", (fetchEvent) => {
+  fetchEvent.respondWith(handler(fetchEvent.request));
+});
