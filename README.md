@@ -24,8 +24,10 @@ You can change the code in `src/index.js`.
 ### 4. Run the JavaScript Worker
 
 ```bash
-wasmer run .
+wasmer run . --net
 ```
+
+> This will start a server on port 8080. You can send a request to `http://localhost:8080`.
 
 You will get the output from the JavaScript Worker.
 
