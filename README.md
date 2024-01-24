@@ -4,7 +4,9 @@ This is a simple [Javascript Service Worker](https://python.org/) server templat
 
 ## Usage
 
-Modify the logic of your simple Python HTTP server in the `src/index.js` file.
+You can find the logic of the Javascript worker in the `src/index.js` file.
+
+You can run the server easily with:
 
 ```bash
 wasmer run . --net
