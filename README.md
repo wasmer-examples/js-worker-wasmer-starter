@@ -1,40 +1,30 @@
-# js-worker-wasmer-starter
+This is a simple [Javascript Service Worker](https://python.org/) server template running with [WinterJS](https://github.com/wasmerio/winterjs).
 
-A JavaScript Worker starter using [WinterJS](https://github.com/wasmerio/winterjs).
-This starter's full tutorial is available [here](https://docs.wasmer.io/edge/quickstart/js-wintercg).
+> This starter's full tutorial is available [here](https://docs.wasmer.io/edge/quickstart/js-wintercg).
 
 ## Usage
 
-### 1. Install the `wasmer` CLI
-
-```bash
-curl https://get.wasmer.io -sSfL | sh
-```
-
-### 2. Clone this repository
-
-```bash
-git clone https://github.com/wasmer-examples/js-worker-wasmer-starter.git
-```
-
-### 3. Add your JavaScript Worker
-
-You can change the code in `src/index.js`.
-
-### 4. Run the JavaScript Worker
+Modify the logic of your simple Python HTTP server in the `src/index.js` file.
 
 ```bash
 wasmer run . --net
 ```
 
-> This will start a server on port 8080. You can send a request to `http://localhost:8080`.
+> [!NOTE]
+> You will need to have Wasmer installed (check out [the docs to install the Wasmer CLI](https://docs.wasmer.io/install)!). 
+> The `--net` flag is required to enable networking support in Wasmer.
 
-You will get the output from the JavaScript Worker.
+This command will start an HTTP server on port 8080. You can send a request to `http://localhost:8080`.
 
-### 5. Deploy the JavaScript Worker
+## Deploy on Wasmer Edge
+
+The easiest way to deploy your Javascript Worker is to use the [Wasmer Edge](https://wasmer.io/products/edge).
+
+Live example: http://wasmer-js-worker-starter.wasmer.app/
 
 ```bash
 wasmer deploy
 ```
 
+> [!NOTE]
 > You will need to change the namespace in `wasmer.toml` to your own namespace and app name in `app.yaml` to your own app name.
