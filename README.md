@@ -4,7 +4,9 @@ This is a simple [Javascript Service Worker](https://python.org/) server templat
 
 ## Usage
 
-Modify the logic of your simple Python HTTP server in the `src/index.js` file.
+Modify the logic of your the Javascript worker in the `src/index.js` file.
+
+And now, you can run the JS Service Worker locally with:
 
 ```bash
 wasmer run . --net
