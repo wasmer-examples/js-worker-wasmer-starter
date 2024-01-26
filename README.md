@@ -6,23 +6,23 @@ This is a simple [Javascript Service Worker](https://python.org/) server templat
 
 Modify the logic of your the Javascript worker in the `src/index.js` file.
 
-And now, you can run the JS Service Worker locally with:
+You can run the JS Service Worker locally with (check out the [Wasmer install guide](https://docs.wasmer.io/install)):
 
 ```bash
 wasmer run . --net
 ```
 
-> [!NOTE]
-> You will need to have Wasmer installed (check out [the docs to install the Wasmer CLI](https://docs.wasmer.io/install)!). 
-> The `--net` flag is required to enable networking support in Wasmer.
+> [!TIP]
+> You can also run `wasmer run wasmer-examples/gatsby-wasmer-starter --net` to run the published package locally
 
-This command will start an HTTP server on port 8080. You can send a request to `http://localhost:8080`.
+Open [http://localhost:8080](http://localhost:8080) with your browser to see the worker working!
+
 
 ## Deploy on Wasmer Edge
 
 The easiest way to deploy your Javascript Worker is to use the [Wasmer Edge](https://wasmer.io/products/edge).
 
-Live example: http://wasmer-js-worker-starter.wasmer.app/
+Live example: https://wasmer-js-worker-starter.wasmer.app/
 
 ```bash
 wasmer deploy

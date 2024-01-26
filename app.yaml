@@ -1,6 +1,4 @@
 ---
 kind: wasmer.io/App.v0
 name: wasmer-js-worker-starter
-package: wasmer/js-worker-starter
-cli_args:
-  - /src/index.js
+package: wasmer-examples/js-worker-wasmer-starter

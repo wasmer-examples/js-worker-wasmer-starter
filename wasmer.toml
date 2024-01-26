@@ -1,7 +1,9 @@
 [package]
-name = "wasmer/js-worker-starter"
-version = "0.1.0"
-description = "wasmer/js-worker-starter js worker"
+name = "wasmer-examples/js-worker-wasmer-starter"
+version = "0.2.0"
+description = "JS Service Worker Wasmer starter package"
+readme = "README.md"
+repository = "https://github.com/wasmer-examples/js-worker-wasmer-starter"
 
 [dependencies]
 "wasmer/winterjs" = "*"
@@ -11,7 +13,7 @@ description = "wasmer/js-worker-starter js worker"
 
 [[command]]
 name = "script"
-module = "wasmer/winterjs:wasmer-winter"
+module = "wasmer/winterjs:winterjs"
 runner = "https://webc.org/runner/wasi"
 
 [command.annotations.wasi]
