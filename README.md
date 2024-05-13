@@ -12,9 +12,6 @@ You can run the JS Service Worker locally with (check out the [Wasmer install gu
 wasmer run . --net
 ```
 
-> [!TIP]
-> You can also run `wasmer run wasmer-examples/gatsby-wasmer-starter --net` to run the published package locally
-
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the worker working!
 
 
@@ -27,6 +24,3 @@ Live example: https://wasmer-js-worker-starter.wasmer.app/
 ```bash
 wasmer deploy
 ```
-
-> [!NOTE]
-> You will need to change the namespace in `wasmer.toml` to your own namespace and app name in `app.yaml` to your own app name.

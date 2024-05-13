@@ -1,4 +1,3 @@
 ---
 kind: wasmer.io/App.v0
-name: wasmer-js-worker-starter
-package: wasmer-examples/js-worker-wasmer-starter
+package: .
