@@ -1,8 +1,8 @@
 async function handler(request) {
   const out = JSON.stringify({
-    success: true,
-    package: "wasmer/js-worker-starter",
-  });
+    env: process.env,
+    headers: Object.fromEntries(request.headers),
+  }, null, 2);
   return new Response(out, {
     headers: { "content-type": "application/json" },
   });
