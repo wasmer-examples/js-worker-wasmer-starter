@@ -9,7 +9,7 @@ Modify the logic of your the Javascript worker in the `src/index.js` file.
 You can run the JS Service Worker locally with (check out the [Wasmer install guide](https://docs.wasmer.io/install)):
 
 ```bash
-wasmer run . --net
+wasmer run .
 ```
 
 Open [http://localhost:8080](http://localhost:8080) with your browser to see the worker working!
