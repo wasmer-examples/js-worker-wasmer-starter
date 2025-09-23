@@ -1,6 +1,6 @@
 This is a simple [Javascript Service Worker](https://python.org/) server template running with [WinterJS](https://github.com/wasmerio/winterjs).
 
-> This starter's full tutorial is available [here](https://docs.wasmer.io/edge/quickstart/js-wintercg).
+> This starter's full tutorial is available [here](https://docs.wasmer.io/edge/guides/js-wintercg).
 
 ## Usage
 
