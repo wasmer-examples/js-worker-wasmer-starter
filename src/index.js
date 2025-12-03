@@ -1,8 +1,5 @@
 async function handler(request) {
-  const out = JSON.stringify({
-    env: process.env,
-    headers: Object.fromEntries(request.headers),
-  }, null, 2);
+  const out = JSON.stringify(process.env);
   return new Response(out, {
     headers: { "content-type": "application/json" },
   });

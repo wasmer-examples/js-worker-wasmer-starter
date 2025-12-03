@@ -1,26 +1,32 @@
-This is a simple [Javascript Service Worker](https://python.org/) server template running with [WinterJS](https://github.com/wasmerio/winterjs).
+# WinterCG Worker (JavaScript) + Wasmer
 
-> This starter's full tutorial is available [here](https://docs.wasmer.io/edge/guides/js-wintercg).
+This example shows how to run a **WinterCG-compatible worker**—powered by **WinterJS**—on **Wasmer Edge**.
 
-## Usage
+> Full tutorial: https://docs.wasmer.io/edge/quickstart/js-wintercg
 
-Modify the logic of your the Javascript worker in the `src/index.js` file.
+## Demo
 
-You can run the JS Service Worker locally with (check out the [Wasmer install guide](https://docs.wasmer.io/install)):
+https://wasmer-js-worker-starter.wasmer.app/
+
+## How it Works
+
+`src/index.js` exports a single fetch event handler:
+
+* `handler(request)` serialises the worker’s environment (`process.env`) into JSON.
+* `addEventListener("fetch", ...)` registers the handler so every request returns the JSON payload.
+
+Because WinterJS implements the WinterCG APIs, the same worker can run on Wasmer Edge or other compatible hosts.
+
+## Running Locally
 
 ```bash
 wasmer run .
 ```
 
-Open [http://localhost:8080](http://localhost:8080) with your browser to see the worker working!
+The Wasmer CLI bundles and serves the worker on `http://127.0.0.1:8080/`. Modify `src/index.js`, rerun the command, and refresh to test changes.
 
+## Deploying to Wasmer (Overview)
 
-## Deploy on Wasmer Edge
-
-The easiest way to deploy your Javascript Worker is to use the [Wasmer Edge](https://wasmer.io/products/edge).
-
-Live example: https://wasmer-js-worker-starter.wasmer.app/
-
-```bash
-wasmer deploy
-```
+1. Ensure your project exports a fetch handler from `src/index.js` (or another entrypoint defined in `wasmer.toml`).
+2. Deploy with `wasmer deploy` or via the Wasmer dashboard.
+3. Hit `https://<your-subdomain>.wasmer.app/` to inspect the response.
